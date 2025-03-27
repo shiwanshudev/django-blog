@@ -1,0 +1,12 @@
+{% extends "layout.html" %} 
+{% block title %}AI Blog - Posts{% endblock title %}
+{% block content %}
+<h1>Posts</h1>
+{% for post in posts %}
+<div>
+  <a href="{{post.slug}}"><h2>{{post.title}}</h2></a>
+  <p>{{post.content}}</p>
+  <p>{{post.date_posted}}</p>
+</div>
+{% endfor %} 
+{% endblock content %}
